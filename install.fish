@@ -6,8 +6,6 @@ function log
     echo "[ssh-ident.fish]" $argv
 end
 
-log Set ssh-ident path: $__sif_ssh_ident_bin_path 
-
 function __sif_create_symlink
     if not test -L $__sif_home_bin_path/$argv
         ln -s $__sif_ssh_ident_bin_path  $__sif_home_bin_path/$argv
