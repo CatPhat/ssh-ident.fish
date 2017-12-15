@@ -3,8 +3,7 @@ set true_ssh_ident_path $HOME/.config/fisherman/ssh-ident/ssh-ident
 
 function check_if_path_exists
     set bin $argv[1]
-    set current_bin_path (whereis -b $bin)
-    if test 1 -eq (echo $current_bin_path | grep -c $correct_bin_path/$bin)
+    if test -e $correct_bin_path/$bin
         echo exists
     else 
         echo $correct_bin_path/$bin does not exist
