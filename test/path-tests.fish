@@ -1,10 +1,8 @@
-set -l sif_bins ssh scp sftp
-   
 test "$TESTNAME: $HOME/bin exists"
     -d $HOME/bin
 end
 
-for bin in $sif_bins
+for bin in $__sif_bins
     test "$TESTNAME: $bin has a valid path."
         valid = (__sif_check_if_path_is_valid $bin)
     end

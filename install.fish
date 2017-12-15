@@ -1,5 +1,6 @@
 set -U __sif_ssh_ident_bin_path $HOME/.config/fisherman/ssh-ident/ssh-ident
 set -U __sif_home_bin_path  $HOME/bin
+set -U __sif_bins ssh scp sftp
 
 function log
     echo "[ssh-ident.fish]" $argv
