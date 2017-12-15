@@ -1,5 +1,5 @@
-set correct_bin_path "$HOME/bin"
-set true_ssh_ident_path $HOME/.config/fisherman/ssh-ident/ssh-ident
+set correct_bin_path $__ssh_ident_fish_bin_path
+set true_ssh_ident_path $__ssh_ident_fish_bin
 
 function check_if_path_exists
     set bin $argv[1]
