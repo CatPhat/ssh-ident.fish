@@ -5,7 +5,7 @@ set __ssh_ident_fish_bin ~/.config/fisherman/ssh-ident/ssh-ident
 
 function create_symlink
     if not test -L $HOME/bin/$argv
-    echo $__ssh_ident_fish_bin
+    echo "ln -s $__ssh_ident_fish_bin $HOME/bin/$argv"
         ln -s $__ssh_ident_fish_bin  $HOME/bin/$argv
     end
 end
