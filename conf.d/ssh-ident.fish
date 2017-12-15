@@ -13,4 +13,3 @@ end
 create_symlink ssh
 create_symlink scp
 create_symlink sftp
-~                                
