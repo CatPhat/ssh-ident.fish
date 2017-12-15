@@ -1,7 +1,9 @@
 set __ssh_ident_fish_bin ~/.config/fisherman/ssh-ident/ssh-ident
 
 [ ! -d ~/bin ]; and mkdir -p $HOME/bin
-set fish_user_paths $HOME/bin $fish_user_paths
+if not contains $HOME/bin $fish_user_paths
+    set -U fish_user_paths $HOME/bin $fish_user_paths
+end
 
 function create_symlink
     if not test -L $HOME/bin/$argv
