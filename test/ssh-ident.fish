@@ -37,6 +37,10 @@ test "$TESTNAME: Base test $BASENAME"
     -z ""
 end
 
+test "$TESTNAME: $HOME/bin exists"
+    -d $HOME/bin
+end
+
 test "$TESTNAME: SSH exists in correct directory"
     exists = (check_if_path_exists ssh)
 end
