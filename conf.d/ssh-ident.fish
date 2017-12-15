@@ -7,9 +7,13 @@ end
 
 function create_symlink
     if not test -L $HOME/bin/$argv
-    echo "ln -s $__ssh_ident_fish_bin $HOME/bin/$argv"
-        ln -s $__ssh_ident_fish_bin  $HOME/bin/$argv
+        echo "ln -s $__ssh_ident_fish_bin $HOME/bin/$argv"
+        ln -s $__ssh_ident_fish_bin $HOME/bin/$argv
     end
+end
+
+if status --is-login
+    echo "logged in"
 end
 
 create_symlink ssh
