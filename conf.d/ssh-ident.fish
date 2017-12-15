@@ -17,10 +17,8 @@ function set_path
     end
 end
 
-if status --is-login
-    create_home_bin
-    set_path
-    create_symlink ssh
-    create_symlink scp
-    create_symlink sftp
-end
+create_home_bin
+set_path
+create_symlink ssh
+create_symlink scp
+create_symlink sftp
