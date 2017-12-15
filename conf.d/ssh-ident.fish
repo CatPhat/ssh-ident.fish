@@ -1,10 +1,5 @@
 set __ssh_ident_fish_bin ~/.config/fisherman/ssh-ident/ssh-ident
 
-[ ! -d $HOME/bin ]; and mkdir -p $HOME/bin
-if not contains $HOME/bin $fish_user_paths
-    set -U fish_user_paths $HOME/bin $fish_user_paths
-end
-
 function create_symlink
     if not test -L $HOME/bin/$argv
         echo "ln -s $__ssh_ident_fish_bin $HOME/bin/$argv"
@@ -12,10 +7,20 @@ function create_symlink
     end
 end
 
-if status --is-login
-    echo "logged in"
+function create_home_bin
+    [ ! -d $HOME/bin ]; and mkdir -p $HOME/bin
 end
 
-create_symlink ssh
-create_symlink scp
-create_symlink sftp
+function set_path
+    if not contains $HOME/bin $fish_user_paths
+        set -U fish_user_paths $HOME/bin $fish_user_paths
+    end
+end
+
+if status --is-login
+    create_home_bin
+    set_path
+    create_symlink ssh
+    create_symlink scp
+    create_symlink sftp
+end
