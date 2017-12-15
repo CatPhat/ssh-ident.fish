@@ -1,6 +1,6 @@
 set __ssh_ident_fish_bin ~/.config/fisherman/ssh-ident/ssh-ident
 
-[ ! -d ~/bin ]; and mkdir -p $HOME/bin
+[ ! -d $HOME/bin ]; and mkdir -p $HOME/bin
 if not contains $HOME/bin $fish_user_paths
     set -U fish_user_paths $HOME/bin $fish_user_paths
 end
