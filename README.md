@@ -3,7 +3,8 @@
 [![Build Status][travis-badge]][travis-link]
 [![Slack Room][slack-badge]][slack-link]
 
-Uses ccontavalli/ssh-ident to manage and automatically load ssh-agent.
+
+Uses [ssh-ident](ccontavalli/ssh-ident) to manage and automatically load ssh-agent.
 
 ## Install
 
