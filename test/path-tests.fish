@@ -1,5 +1,5 @@
-test "$TESTNAME: $HOME/bin exists"
-    -d $HOME/bin
+test "$TESTNAME: $__sif_home_bin_path exists"
+    -d $__sif_home_bin_path
 end
 
 for bin in $__sif_bins
