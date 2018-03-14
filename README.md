@@ -15,7 +15,7 @@ fisher catphat/ssh-ident.fish
 ```
 
 [travis-link]: https://travis-ci.org/catphat/ssh-ident.fish
-[travis-badge]: https://img.shields.io/travis/CatPhat/ssh-ident.fish.svg
+[travis-badge]: https://img.shields.io/travis/catphat/ssh-ident.fish.svg
 [slack-link]: https://fisherman-wharf.herokuapp.com
 [slack-badge]: https://fisherman-wharf.herokuapp.com/badge.svg
 [fisherman]: https://github.com/fisherman/fisherman
