@@ -1,6 +1,6 @@
 set -U __sif_ssh_ident_bin_path $HOME/.config/fisherman/ssh-ident/ssh-ident
 set -U __sif_home_bin_path  $HOME/bin
-set -U __sif_bins ssh scp sftp
+set -U __sif_bins ssh sftp
 
 function log
     echo "[ssh-ident.fish]" $argv
@@ -15,15 +15,15 @@ end
 
 function __sif_create_home_bin
     if [ ! -d $__sif_home_bin_path ]
-        mkdir -p $__sif_home_bin_path 
-        log mkdir $__sif_home_bin_path 
+        mkdir -p $__sif_home_bin_path
+        log mkdir $__sif_home_bin_path
     end
 end
 
 function __sif_set_path
     if not contains $__sif_home_bin_path $fish_user_paths
         set -U fish_user_paths $__sif_home_bin_path $fish_user_paths
-        log Update \$fish_user_paths to include $__sif_home_bin_path 
+        log Update \$fish_user_paths to include $__sif_home_bin_path
     end
 end
 
