@@ -31,5 +31,4 @@ end
 __sif_create_home_bin
 __sif_set_path
 __sif_create_symlink ssh
-__sif_create_symlink scp
 __sif_create_symlink sftp
